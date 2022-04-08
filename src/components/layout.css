@@ -1,0 +1,31 @@
+.gatsby-highlight pre {
+    background-color: rgb(240, 240, 240);
+    padding: 1.2rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+figure figcaption {
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.68);
+    font-size: 13px;
+}
+
+code {
+    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgb(240, 240, 240);
+    padding: 3px 4px;
+    margin: 0 2px;
+    font-style: normal;
+    font-size: unset;
+}
+
+a {
+    color: #5ea93e;
+}
+
+body {
+    background-color: #fcfffc;
+}
