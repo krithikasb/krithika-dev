@@ -7,9 +7,7 @@
 
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-
-import { rhythm } from "../utils/typography"
+import { StaticImage } from "gatsby-plugin-image";
 
 function Bio() {
   return (
@@ -18,29 +16,22 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <div
-            style={{
-              display: `flex`,
-              marginBottom: rhythm(2.5),
-            }}
-          >
-            {/* <Image
-              fixed={data.avatar.childImageSharp.fixed}
+          <div className="bio">
+            <StaticImage
+              // fixed={data.avatar.childImageSharp.gatsbyImageData}
+              src="../../content/assets/profile-pic.jpg"
+              width={50}
+              height={50}
               alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
+              className="bio-avatar"
               imgStyle={{
                 borderRadius: `50%`,
               }}
-            /> */}
-            {/* <p>
-              I'm <strong>{author}</strong>, a Front-end Developer who writes about React, Javascript, CSS and other things.
+            />
+            <p>
+              I'm <strong>{author}</strong>, a Front-end Developer.
               {` `}
-            </p> */}
+            </p>
           </div>
         )
       }}
@@ -50,13 +41,6 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author
