@@ -11,15 +11,39 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1 className="main-heading">
-          <Link to="/">{title}</Link>
-        </h1>
+        <nav className="main-nav">
+          <Link className="header-link-home" to={`/`}>
+            {title}
+          </Link>
+            <Link
+              className={`${location.pathname === "/projects" ? "selected" : ""} header-link-home`}
+              to="/projects">
+              {"Projects"}
+            </Link>
+            <Link
+              className={`${location.pathname === "/posts" ? "selected" : ""} header-link-home`}
+              to="/posts">
+              {"Posts"}
+            </Link>
+        </nav>
       )
     } else {
       header = (
-        <Link className="header-link-home" to={`/`}>
-          {title}
-        </Link>
+        <nav className="main-nav">
+          <Link className="header-link-home" to={`/`}>
+            {title}
+          </Link>
+            <Link
+              className={`${location.pathname === "/projects" ? "selected" : ""} header-link-home`}
+              to="/projects">
+              {"Projects"}
+            </Link>
+            <Link
+              className={`${location.pathname === "/posts" ? "selected" : ""} header-link-home`}
+              to="/posts">
+              {"Posts"}
+            </Link>
+        </nav>
       )
     }
     return (

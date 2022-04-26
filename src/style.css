@@ -103,7 +103,7 @@ h5,
 h6 {
   font-family: var(--font-heading);
   margin-top: var(--spacing-12);
-  margin-bottom: var(--spacing-6);
+  margin-bottom: var(--spacing-4);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
 }
@@ -125,6 +125,7 @@ h1 {
 
 h2 {
   font-size: var(--fontSize-5);
+  font-family: var(--fontFamily-serif);
 }
 
 h3 {
@@ -254,6 +255,12 @@ a:focus {
   margin-bottom: var(--spacing-12);
 }
 
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: var(--spacing-4);
+}
+
 .main-heading {
   font-size: var(--fontSize-7);
   margin: 0;
@@ -284,6 +291,10 @@ a:focus {
   font-family: var(--font-heading);
   text-decoration: none;
   font-size: var(--fontSize-2);
+}
+
+.header-link-home.selected {
+  color: purple;
 }
 
 .bio {
@@ -332,6 +343,11 @@ figure figcaption {
   text-align: center;
   color: rgba(0, 0, 0, 0.68);
   font-size: 13px;
+}
+
+video {
+  width: 100%;
+  margin-bottom: var(--spacing-4);
 }
 
 figure img {

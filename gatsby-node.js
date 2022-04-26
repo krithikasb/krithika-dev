@@ -10,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
+          filter: { frontmatter: { categories: { eq: "professional" } } }
           limit: 1000
         ) {
           edges {
@@ -33,7 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create blog posts pages.
     console.log("posts", result.data.allMarkdownRemark.edges)
-    const posts = result.data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.categories.includes("professional"))
+    const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node

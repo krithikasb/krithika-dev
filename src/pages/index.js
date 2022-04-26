@@ -1,11 +1,14 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, navigate, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
+  componentDidMount() {
+    navigate(`/projects`);
+  }
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -13,8 +16,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        {/* <Bio /> */}
+        {/* <SEO title="All posts" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -32,13 +34,13 @@ class BlogIndex extends React.Component {
               />
             </div>
           )
-        })}
+        })} */}
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Krithika's blog`,
+    title: `Krithika's site`,
     author: `Krithika`,
-    description: `Krithika's blog`,
+    description: `Krithika's site`,
     siteUrl: `https://krithika.dev/`,
     social: {
       twitter: ``,
@@ -14,6 +14,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/projects`,
+        name: `projects`,
       },
     },
     {
@@ -71,7 +78,8 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.filter(node => node.frontmatter.categories.includes("professional")).map(node => {
+              return allMarkdownRemark.nodes
+                .map(node => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
@@ -84,7 +92,8 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                  filter: { frontmatter: { categories: { eq: "professional" } } }
                 ) {
                   nodes {
                     excerpt
