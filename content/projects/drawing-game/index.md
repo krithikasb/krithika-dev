@@ -7,7 +7,7 @@ description: "A pictionary game you can play online with your friends! Written i
 categories: ["project"]
 keywords: []
 canonical_url: "projects/draw"
-link: "projects/draw"
+link: "https://draw.krithika.dev"
 ---
 
 <video controls autoplay="autoplay" loop="true">

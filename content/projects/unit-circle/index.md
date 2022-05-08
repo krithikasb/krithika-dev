@@ -7,11 +7,11 @@ description: "I made an explainer to go along with the definitions of basic trig
 categories: ["project"]
 keywords: []
 canonical_url: "/projects/unit-circle"
-link: "/projects/unit-circle"
+link: "https://unitcircle.krithika.dev"
 ---
 
 <video controls autoplay="autoplay" loop="true">
     <source src="images2/unit-circle.mov" type="video/mp4">
 </video>
 
-I made an explainer to go along with the definitions of basic trigonometric concepts, sine and cosine, with a unit circle, using p5.js.
+An explainer to go along with the definitions of basic trigonometric concepts, sine and cosine, with a unit circle, using p5.js.

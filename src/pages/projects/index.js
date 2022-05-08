@@ -20,9 +20,9 @@ class ProjectIndex extends React.Component {
           return (
             <div key={node.fields.slug}>
               <h2>
-                <Link to={node.frontmatter.link}>
+                <a href={node.frontmatter.link}>
                   {title}
-                </Link>
+                </a>
               </h2>
               {/* <small>{node.frontmatter.date}</small> */}
               <p
