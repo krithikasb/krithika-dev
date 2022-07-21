@@ -13,7 +13,6 @@ class Index extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    console.log("posts", posts)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
