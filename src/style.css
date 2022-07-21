@@ -255,10 +255,32 @@ a:focus {
   margin-bottom: var(--spacing-12);
 }
 
+.main-header {
+  text-align: center;
+}
+
+.main-header > .header-link-home {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.main-header-left {
+  text-align: left;
+}
+
 .main-nav {
   display: grid;
-  grid-template-columns: 1fr auto auto;
-  grid-gap: var(--spacing-4);
+  grid-auto-flow: column;
+  grid-gap: var(--spacing-8);
+  justify-content: center;
+  padding: var(--spacing-4);
+}
+
+.main-nav > .header-link-home {
+  padding: var(--spacing-2) var(--spacing-4);
+  border: 1px solid;
+  background-color: white;
+  border-radius: 4px;
 }
 
 .main-heading {
@@ -338,7 +360,8 @@ a:focus {
 }
 
 figure figcaption {
-  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva,
+    Arial, sans-serif;
   font-weight: 400;
   text-align: center;
   color: rgba(0, 0, 0, 0.68);

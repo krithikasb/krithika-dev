@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import styles from './layout.css';
+import styles from "./layout.css"
 
 class Layout extends React.Component {
   render() {
@@ -11,39 +11,45 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <nav className="main-nav">
+        <div className="main-header">
           <Link className="header-link-home" to={`/`}>
             {title}
           </Link>
+          <nav className="main-nav">
             <Link
-              className={`${location.pathname === "/projects" ? "selected" : ""} header-link-home`}
-              to="/projects">
+              className={`${
+                location.pathname === "/#projects" ? "selected" : ""
+              } header-link-home`}
+              to="/#projects"
+            >
               {"Projects"}
             </Link>
             <Link
-              className={`${location.pathname === "/posts" ? "selected" : ""} header-link-home`}
-              to="/posts">
+              className={`${
+                location.pathname === "/#posts" ? "selected" : ""
+              } header-link-home`}
+              to="/#posts"
+            >
               {"Posts"}
             </Link>
-        </nav>
+            <Link
+              className={`${
+                location.pathname === "/#videos" ? "selected" : ""
+              } header-link-home`}
+              to="/#videos"
+            >
+              {"Videos"}
+            </Link>
+          </nav>
+        </div>
       )
     } else {
       header = (
-        <nav className="main-nav">
+        <div className="main-header-left">
           <Link className="header-link-home" to={`/`}>
             {title}
           </Link>
-            <Link
-              className={`${location.pathname === "/projects" ? "selected" : ""} header-link-home`}
-              to="/projects">
-              {"Projects"}
-            </Link>
-            <Link
-              className={`${location.pathname === "/posts" ? "selected" : ""} header-link-home`}
-              to="/posts">
-              {"Posts"}
-            </Link>
-        </nav>
+        </div>
       )
     }
     return (
