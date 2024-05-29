@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, navigate, graphql } from "gatsby"
+import Markdown from "markdown-to-jsx"
 
 import Bio from "../../components/bio"
 import Layout from "../../components/layout"
@@ -20,16 +21,12 @@ class PostIndex extends React.Component {
           return (
             <div key={node.fields.slug}>
               <h2>
-                <Link to={node.fields.slug}>
-                  {title}
-                </Link>
+                <Link to={node.fields.slug}>{title}</Link>
               </h2>
               <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
+              <Markdown options={{ wrapper: "p", forceWrapper: true }}>
+                {node.frontmatter.description || node.excerpt}
+              </Markdown>
             </div>
           )
         })}
@@ -47,9 +44,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC },
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { categories: { eq: "professional" } } }
-      ) {
+    ) {
       edges {
         node {
           excerpt

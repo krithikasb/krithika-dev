@@ -7,13 +7,13 @@
 
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image"
 
 function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
-      render={data => {
+      render={(data) => {
         const { author, social } = data.site.siteMetadata
         return (
           <div className="bio">
@@ -29,8 +29,11 @@ function Bio() {
               }}
             />
             <p>
-              I'm <strong>{author}</strong>, a Front-end Developer.
-              {` `}
+              I'm <strong>{author}</strong>, a Software Engineer who loves
+              Javascript! I'm all about creative coding with random prompts —
+              it's a fun way to spark fresh ideas and pick up new stuff. I'm
+              convinced that this kind of playful, spontaneous coding is a great
+              way to keep in touch with programming outside of work.
             </p>
           </div>
         )

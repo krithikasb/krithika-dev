@@ -15,3 +15,5 @@ link: "https://unitcircle.krithika.dev"
 </video>
 
 An explainer to go along with the definitions of basic trigonometric concepts, sine and cosine, with a unit circle, using p5.js.
+
+Check out the [full explainer here](https://unitcircle.krithika.dev).

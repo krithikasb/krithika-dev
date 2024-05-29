@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import Markdown from "markdown-to-jsx"
 import Bio from "../../components/bio"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -20,16 +20,12 @@ class ProjectIndex extends React.Component {
           return (
             <div key={node.fields.slug}>
               <h2>
-                <a href={node.frontmatter.link}>
-                  {title}
-                </a>
+                <a href={node.frontmatter.link}>{title}</a>
               </h2>
               {/* <small>{node.frontmatter.date}</small> */}
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.html,
-                }}
-              />
+              <Markdown options={{ wrapper: "p", forceWrapper: true }}>
+                {node.html}
+              </Markdown>
             </div>
           )
         })}
@@ -47,9 +43,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC },
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { categories: { eq: "project" } } }
-      ) {
+    ) {
       edges {
         node {
           excerpt

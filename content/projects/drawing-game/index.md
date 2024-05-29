@@ -15,3 +15,5 @@ link: "https://draw.krithika.dev"
 </video>
 
 A pictionary game you can play online with your friends! Written in plain javascript, using HTML5 canvas and Firebase real time database.
+
+Play with friends at https://draw.krithika.dev.

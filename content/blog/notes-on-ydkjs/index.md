@@ -5,7 +5,7 @@ title: "Notes on Kyle Simspon's YDKJS"
 draft: false
 description: "When I was in college, I mostly stuck to programming in C and C++, apart from occasional fiddling with Java, C#, and Python. I got a job as a Python programmer, and I read this book called Think…"
 categories: ["professional"]
-keywords: [JavaScript,Introduction,Programming,Front End Development]
+keywords: [JavaScript, Introduction, Programming, Front End Development]
 canonical_url: "https://krithika.dev/notes-on-ydkjs"
 ---
 
@@ -21,7 +21,7 @@ The preface describes the general tendency of JavaScript developers to learn jus
 
 <figure>
 
-![](images2/notes-on-ykdjs-featured.png)
+![](images2/notes-on-ydkjs-featured.png)
 
 </figure>
 

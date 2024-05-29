@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, navigate, graphql } from "gatsby"
+import Markdown from "markdown-to-jsx"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -16,7 +17,8 @@ class Index extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="Krithika's site" />
+        <Bio />
         <h1 id="projects">Projects</h1>
         {posts
           .filter(({ node }) => node.frontmatter.categories.includes("project"))
@@ -30,11 +32,9 @@ class Index extends React.Component {
                   </a>
                 </h2>
                 {/* <small>{node.frontmatter.date}</small> */}
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.html,
-                  }}
-                />
+                <Markdown options={{ wrapper: "p", forceWrapper: true }}>
+                  {node.html}
+                </Markdown>
               </div>
             )
           })}
@@ -51,11 +51,9 @@ class Index extends React.Component {
                   <Link to={node.fields.slug}>{title}</Link>
                 </h2>
                 <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
+                <Markdown options={{ wrapper: "p", forceWrapper: true }}>
+                  {node.frontmatter.description || node.excerpt}
+                </Markdown>
               </div>
             )
           })}
@@ -72,11 +70,9 @@ class Index extends React.Component {
                   {/* </a> */}
                 </h2>
                 {/* <small>{node.frontmatter.date}</small> */}
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.html,
-                  }}
-                />
+                <Markdown options={{ wrapper: "p", forceWrapper: true }}>
+                  {node.html}
+                </Markdown>
               </div>
             )
           })}
