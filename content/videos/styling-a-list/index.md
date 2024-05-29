@@ -10,7 +10,17 @@ canonical_url: "videos/advice-bot-1"
 link: ""
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H6-wtFTOVMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe
+    width="560"
+    height="315" 
+    src="https://www.youtube.com/embed/H6-wtFTOVMM"
+    title="Styling a list with ::before and ::after pseudoelements and CSS grid"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    frameborder="0"
+    webkitallowfullscreen="true"
+    mozallowfullscreen="true"
+    allowfullscreen
+></iframe>
 
 For advice bot, I wanted to make the list of previously submitted advice look like zulip, but it was a dynamically generated list and I didn't want to add too many elements using JS. Here's my solution for styling the dynamically generated list with the ::before and ::after pseudoelements and CSS grid!
 

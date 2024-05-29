@@ -10,7 +10,17 @@ canonical_url: "/videos/caterpillar"
 link: ""
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L3eHmL2_eXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe
+    width="560"
+    height="315" 
+    src="https://www.youtube.com/embed/L3eHmL2_eXg"
+    title="Wiggly caterpillar - Creative Coding - RC presentation"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    frameborder="0"
+    webkitallowfullscreen="true"
+    mozallowfullscreen="true"
+    allowfullscreen
+></iframe>
 
 I made a wiggly caterpillar during one of the creative coding events at Recurse Center, using p5.js.
 

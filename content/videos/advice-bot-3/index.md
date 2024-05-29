@@ -10,7 +10,17 @@ canonical_url: "videos/advice-bot-1"
 link: ""
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eeLSRz6BLwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe
+    width="560"
+    height="315" 
+    src="https://www.youtube.com/embed/eeLSRz6BLwU"
+    title="Advice bot (part 3)"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    frameborder="0"
+    webkitallowfullscreen="true"
+    mozallowfullscreen="true"
+    allowfullscreen
+></iframe>
 
 At recurse center, I made a zulip bot that gives recursers one piece of advice from an alum everyday, and a webapp to collect advice.
 
