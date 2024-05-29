@@ -11,7 +11,7 @@ link: "https://unitcircle.krithika.dev"
 ---
 
 <video controls>
-    <source src="images2/unit-circle.mov" type="video/mp4">
+    <source src="images2/unit-circle.mp4" type="video/mp4">
 </video>
 
 An explainer to go along with the definitions of basic trigonometric concepts, sine and cosine, with a unit circle, using p5.js.

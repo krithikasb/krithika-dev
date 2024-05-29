@@ -11,7 +11,7 @@ link: "https://draw.krithika.dev"
 ---
 
 <video controls>
-    <source src="images2/drawing-game.mov" type="video/mp4">
+    <source src="images2/drawing-game.mp4" type="video/mp4">
 </video>
 
 A pictionary game you can play online with your friends! Written in plain javascript, using HTML5 canvas and Firebase real time database.
