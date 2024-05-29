@@ -10,7 +10,7 @@ canonical_url: "/projects/unit-circle"
 link: "https://unitcircle.krithika.dev"
 ---
 
-<video controls>
+<video controls preload="auto" poster="images2/unit-circle.png">
     <source src="images2/unit-circle.mp4" type="video/mp4">
 </video>
 

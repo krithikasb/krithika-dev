@@ -10,7 +10,7 @@ canonical_url: "projects/draw"
 link: "https://draw.krithika.dev"
 ---
 
-<video controls>
+<video controls preload="auto" poster="images2/drawing-game.png">
     <source src="images2/drawing-game.mp4" type="video/mp4">
 </video>
 
